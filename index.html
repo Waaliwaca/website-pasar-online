@@ -86,10 +86,11 @@
             background-position: center;
         }
 
-        .slide1 { background-image: url('image/UMKM1.png'); }
-        .slide2 { background-image: url('image/UMKM2.png'); }
-        .slide3 { background-image: url('image/UMKM3.png'); }
-        .slide4 { background-image: url('image/UMKM4.png'); }
+        /* PERBAIKAN: Menghapus "image/" dari path */
+        .slide1 { background-image: url('UMKM1.png'); }
+        .slide2 { background-image: url('UMKM2.png'); }
+        .slide3 { background-image: url('UMKM3.png'); }
+        .slide4 { background-image: url('UMKM4.png'); }
 
 
         .hero-slider .overlay {
@@ -216,8 +217,9 @@
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="image/CIDOKOM LOGO.png" alt="Logo Desa Cidokom" class="me-2">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <!-- PERBAIKAN: Menghapus "image/" dari path -->
+                <img src="CIDOKOM LOGO.png" alt="Logo Desa Cidokom" class="me-2">
                 Desa Cidokom
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -225,11 +227,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Profil Desa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Marketplace UMKM</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Berita</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Hubungi Kami</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Beranda
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#products">Produk Unggulan</a></li>
+                            <li><a class="dropdown-item" href="#testimonials">Testimoni</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="profil_desa.html">Profil Desa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="marketplace.html">Marketplace UMKM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hubungi_kami.html">Hubungi Kami</a></li>
                 </ul>
                 <a href="https://forms.gle/KGq5u53tT8d3o4uR7" target="_blank" class="btn btn-secondary ms-lg-3 mt-2 mt-lg-0">Login / Daftar</a>
             </div>
@@ -258,7 +268,8 @@
                 <!-- Card Produk 1 -->
                 <div class="col-lg-3 col-md-6">
                     <div class="card product-card">
-                        <img src="image/Keripik Singkong Balado.png" alt="Keripik Singkong Balado">
+                        <!-- PERBAIKAN: Menghapus "image/" dari path -->
+                        <img src="Keripik Singkong Balado.png" alt="Keripik Singkong Balado">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Keripik Singkong Balado</h5>
                             <p class="card-text text-muted">oleh Ibu Siti</p>
@@ -276,7 +287,8 @@
                 <!-- Card Produk 2 -->
                  <div class="col-lg-3 col-md-6">
                     <div class="card product-card">
-                        <img src="image/Madu Hutan Asli.png" alt="Madu Hutan Asli">
+                        <!-- PERBAIKAN: Menghapus "image/" dari path -->
+                        <img src="Madu Hutan Asli.png" alt="Madu Hutan Asli">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Madu Hutan Asli</h5>
                             <p class="card-text text-muted">oleh Pak Budi</p>
@@ -294,7 +306,8 @@
                 <!-- Card Produk 3 -->
                 <div class="col-lg-3 col-md-6">
                     <div class="card product-card">
-                        <img src="image/Gula Aren Organik.png" alt="Gula Aren Organik">
+                        <!-- PERBAIKAN: Menghapus "image/" dari path -->
+                        <img src="Gula Aren Organik.png" alt="Gula Aren Organik">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Gula Aren Organik</h5>
                             <p class="card-text text-muted">oleh Kelompok Tani Maju</p>
@@ -312,7 +325,8 @@
                 <!-- Card Produk 4 -->
                 <div class="col-lg-3 col-md-6">
                     <div class="card product-card">
-                        <img src="image/Kerajinan Tangan Bambu.png" alt="Kerajinan Tangan Bambu">
+                        <!-- PERBAIKAN: Menghapus "image/" dari path -->
+                        <img src="Kerajinan Tangan Bambu.png" alt="Kerajinan Tangan Bambu">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Kerajinan Tangan Bambu</h5>
                             <p class="card-text text-muted">oleh Sanggar Kreatif</p>
@@ -339,7 +353,7 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section id="testimonials" class="py-5">
         <div class="container">
             <h2 class="section-title">Kritik dan Saran dari Pembeli</h2>
              <div class="row g-4">
