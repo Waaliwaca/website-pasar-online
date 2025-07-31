@@ -13,50 +13,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS Variables disesuaikan dengan tema warna putih dan aksen logo */
         :root {
-            --primary-green: #1e6034; /* Warna hijau tua dari logo */
-            --accent-green: #347f4b;  /* Warna hijau lebih terang untuk aksen */
-            --accent-yellow: #f3c624; /* Warna kuning untuk tombol dan highlight */
+            --primary-green: #1e6034;
+            --accent-green: #347f4b;
+            --accent-yellow: #f3c624;
             --dark-text: #333333;
-            --light-bg: #F8F9FA; /* Warna abu-abu terang untuk latar belakang */
+            --light-bg: #F8F9FA;
             --white: #FFFFFF;
         }
-
         body {
             font-family: 'Lato', sans-serif;
             color: var(--dark-text);
-            background-color: var(--light-bg); /* Latar belakang diubah menjadi abu-abu */
+            background-color: var(--light-bg);
         }
-
         h1, h2, h3, h4, h5, h6, .navbar-brand {
             font-family: 'Merriweather', serif;
         }
-
         .navbar {
-            background-color: var(--white); /* Navbar tetap putih untuk kontras */
+            background-color: var(--white);
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             border-bottom: 1px solid #eaeaea;
         }
-        
-        .navbar-brand {
-            color: var(--dark-text) !important;
-        }
-
-        .navbar-brand img {
-            height: 50px;
-        }
-        
-        .navbar .nav-link {
-            color: var(--dark-text);
-            font-weight: 600;
-        }
-        
-        .navbar .nav-link:hover, .navbar .nav-link.active {
-            color: var(--primary-green);
-        }
-
-        /* --- Hero Section dengan Image Slider --- */
+        .navbar-brand img { height: 50px; }
+        .navbar .nav-link { color: var(--dark-text); font-weight: 600; }
+        .navbar .nav-link:hover, .navbar .nav-link.active { color: var(--primary-green); }
         .hero-slider {
             position: relative;
             height: 85vh;
@@ -68,7 +48,6 @@
             justify-content: center;
             text-align: center;
         }
-
         .hero-slider .slides {
             position: absolute;
             top: 0;
@@ -78,21 +57,16 @@
             display: flex;
             animation: slide 20s infinite;
         }
-
         .hero-slider .slide {
             width: 25%;
             height: 100%;
             background-size: cover;
             background-position: center;
         }
-
-        /* PERBAIKAN: Menggunakan nama file baru yang aman */
         .slide1 { background-image: url('image/UMKM1.png'); }
         .slide2 { background-image: url('image/UMKM2.png'); }
         .slide3 { background-image: url('image/UMKM3.png'); }
         .slide4 { background-image: url('image/UMKM4.png'); }
-
-
         .hero-slider .overlay {
             position: absolute;
             top: 0;
@@ -102,32 +76,23 @@
             background-color: rgba(0, 0, 0, 0.55);
             z-index: 1;
         }
-
         .hero-slider .hero-content {
             position: relative;
             z-index: 2;
         }
-        
         @keyframes slide {
-            0% { left: 0; }
-            20% { left: 0; }
-            25% { left: -100%; }
-            45% { left: -100%; }
-            50% { left: -200%; }
-            70% { left: -200%; }
-            75% { left: -300%; }
-            95% { left: -300%; }
+            0%, 20% { left: 0; }
+            25%, 45% { left: -100%; }
+            50%, 70% { left: -200%; }
+            75%, 95% { left: -300%; }
             100% { left: 0; }
         }
-        /* --- Akhir Hero Section --- */
-
         .section-title {
             color: var(--primary-green);
             margin-bottom: 40px;
             text-align: center;
             font-weight: 700;
         }
-
         .product-card {
             border: 1px solid #e5e5e5;
             border-radius: 8px;
@@ -136,50 +101,29 @@
             background-color: white;
             height: 100%;
         }
-
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-
         .product-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-
-        .star-rating .fa-star {
-            color: var(--accent-yellow);
-        }
-
         .btn-primary {
             background-color: var(--primary-green);
             border-color: var(--primary-green);
         }
-
-        .btn-primary:hover {
-            background-color: var(--accent-green);
-            border-color: var(--accent-green);
-        }
-        
         .btn-secondary {
             background-color: var(--accent-yellow);
             border-color: var(--accent-yellow);
             color: var(--dark-text);
             font-weight: bold;
         }
-        
-        .btn-secondary:hover {
-            background-color: #eab80e;
-            border-color: #eab80e;
-            color: var(--dark-text);
-        }
-
         .cta-section {
-            background-color: var(--white); /* Diubah menjadi putih agar menonjol */
+            background-color: var(--white);
             padding: 60px 0;
         }
-        
         .testimonial-card {
             background-color: white;
             padding: 2rem;
@@ -187,30 +131,13 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             border-radius: 8px;
         }
-        
         footer {
             background-color: var(--dark-text);
             color: white;
             padding: 40px 0 20px 0;
         }
-
-        footer a {
-            color: var(--accent-yellow);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        footer .social-icons a {
-            font-size: 1.5rem;
-            margin: 0 10px;
-            color: var(--white);
-        }
-        footer .social-icons a:hover {
-            color: var(--accent-yellow);
-        }
+        footer a { color: var(--accent-yellow); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -226,15 +153,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Beranda
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#products">Produk Unggulan</a></li>
-                            <li><a class="dropdown-item" href="#testimonials">Testimoni</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="profil_desa.html">Profil Desa</a></li>
                     <li class="nav-item"><a class="nav-link" href="marketplace.html">Marketplace UMKM</a></li>
                     <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
@@ -256,7 +175,7 @@
         <div class="hero-content container">
             <h1 class="display-4">Selamat Datang di Marketplace UMKM Desa Cidokom</h1>
             <p class="lead">Mendukung Produk Lokal, Membangun Desa Bersama.</p>
-            <a href="#products" class="btn btn-primary btn-lg mt-3">Lihat Semua Produk</a>
+            <a href="marketplace.html" class="btn btn-primary btn-lg mt-3">Lihat Semua Produk</a>
         </div>
     </header>
 
@@ -270,31 +189,17 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Keripik Singkong Balado</h5>
                             <p class="card-text text-muted">oleh Ibu Siti</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <p class="fw-bold fs-5 mb-0">Rp 15.000</p>
-                                <div class="star-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                                    <span class="ms-1">(4.5)</span>
-                                </div>
-                            </div>
-                            <a href="detail-keripik-singkong.html" class="btn btn-primary w-100 mt-3">Lihat Detail</a>
+                            <a href="detail-keripik-singkong.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                 <div class="col-lg-3 col-md-6">
                     <div class="card product-card">
                         <img src="image/madu-hutan-asli.png" alt="Madu Hutan Asli">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Madu Hutan Asli</h5>
                             <p class="card-text text-muted">oleh Pak Budi</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <p class="fw-bold fs-5 mb-0">Rp 85.000</p>
-                                <div class="star-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                    <span class="ms-1">(5.0)</span>
-                                </div>
-                            </div>
-                            <a href="detail-madu-hutan.html" class="btn btn-primary w-100 mt-3">Lihat Detail</a>
+                            <a href="detail-madu-hutan.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -304,14 +209,7 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Gula Aren Organik</h5>
                             <p class="card-text text-muted">oleh Kelompok Tani Maju</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <p class="fw-bold fs-5 mb-0">Rp 25.000</p>
-                                <div class="star-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                                    <span class="ms-1">(4.0)</span>
-                                </div>
-                            </div>
-                            <a href="detail-gula-aren.html" class="btn btn-primary w-100 mt-3">Lihat Detail</a>
+                            <a href="detail-gula-aren.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -321,14 +219,7 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Kerajinan Tangan Bambu</h5>
                             <p class="card-text text-muted">oleh Sanggar Kreatif</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <p class="fw-bold fs-5 mb-0">Rp 50.000</p>
-                                <div class="star-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                    <span class="ms-1">(4.8)</span>
-                                </div>
-                            </div>
-                            <a href="detail-kerajinan-bambu.html" class="btn btn-primary w-100 mt-3">Lihat Detail</a>
+                            <a href="detail-kerajinan-bambu.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -350,20 +241,14 @@
              <div class="row g-4">
                 <div class="col-md-6">
                     <div class="testimonial-card">
-                        <blockquote class="mb-3">
-                            "Keripiknya renyah banget dan bumbunya pas! Pengirimannya juga cepat. Saran saya, mungkin bisa ditambah varian rasa lain. Pasti laku keras!"
-                        </blockquote>
+                        <blockquote class="mb-3">"Keripiknya renyah banget dan bumbunya pas! Pengirimannya juga cepat. Saran saya, mungkin bisa ditambah varian rasa lain. Pasti laku keras!"</blockquote>
                         <p class="fw-bold mb-0">Andi Pratama</p>
-                        <p class="text-muted">Pembeli Keripik Singkong Balado</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="testimonial-card">
-                        <blockquote class="mb-3">
-                            "Madunya benar-benar asli, kualitasnya premium. Saya sudah langganan. Kemasannya juga aman dan rapi. Pertahankan terus kualitasnya!"
-                        </blockquote>
+                        <blockquote class="mb-3">"Madunya benar-benar asli, kualitasnya premium. Saya sudah langganan. Kemasannya juga aman dan rapi. Pertahankan terus kualitasnya!"</blockquote>
                         <p class="fw-bold mb-0">Rina Wulandari</p>
-                        <p class="text-muted">Pembeli Madu Hutan Asli</p>
                     </div>
                 </div>
             </div>
@@ -375,31 +260,21 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5>Profil</h5>
-                    <p class="small">
-                        <strong>DESA CIDOKOM - GUNUNG SINDUR</strong><br>
-                        <strong>BOGOR - JAWA BARAT</strong><br>
-                        Website desa dibangun dengan tujuan sebagai media pelayanan publik resmi desa, yang dibangun dan dikelola oleh tim desa setempat. Dengan memanfaatkan website penyelenggaraan pelayanan publik dapat dilakukan secara cepat dan mudah.
-                        <a href="https://cidokom-gunungsindur.desa.id/about-us" target="_blank" class="d-block mt-2">Selengkapnya...</a>
-                    </p>
+                    <p class="small">Website desa dibangun dengan tujuan sebagai media pelayanan publik resmi desa, yang dibangun dan dikelola oleh tim desa setempat.</p>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>Kategori Produk</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Makanan & Minuman</a></li>
-                        <li><a href="#">Kerajinan Tangan</a></li>
-                        <li><a href="#">Produk Pertanian</a></li>
-                        <li><a href="#">Fashion & Aksesoris</a></li>
+                        <li><a href="marketplace.html#makanan">Makanan & Minuman</a></li>
+                        <li><a href="marketplace.html#kerajinan">Kerajinan Tangan</a></li>
+                        <li><a href="marketplace.html#pertanian">Produk Pertanian</a></li>
+                        <li><a href="marketplace.html#fashion">Fashion & Aksesoris</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>Hubungi Kami</h5>
                     <p>Email: <a href="mailto:desacidokom2015@gmail.com">desacidokom2015@gmail.com</a><br>
                        Telepon: <a href="tel:02518414453">(0251) 8414453</a></p>
-                    <div class="social-icons">
-                        <a href="https://web.facebook.com/profile.php?id=61578369452143&_rdc=1&_rdr#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/desa_cidokom/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@Desa_cidokom" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
                 </div>
             </div>
             <hr>
