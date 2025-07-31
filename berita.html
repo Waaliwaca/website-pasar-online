@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS ini sama persis dengan halaman utama untuk konsistensi */
         :root {
             --primary-green: #1e6034;
             --accent-green: #347f4b;
@@ -35,7 +34,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             border-bottom: 1px solid #eaeaea;
         }
-        .navbar-brand { color: var(--dark-text) !important; }
         .navbar-brand img { height: 50px; }
         .navbar .nav-link { color: var(--dark-text); font-weight: 600; }
         .navbar .nav-link:hover, .navbar .nav-link.active { color: var(--primary-green); }
@@ -45,19 +43,38 @@
             padding: 4rem 0;
             text-align: center;
         }
-        .section-title {
-            color: var(--primary-green);
-            margin-bottom: 40px;
-            text-align: center;
-            font-weight: 700;
-        }
-        .card.news-card {
+        .news-card {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--white);
             border: 1px solid #e5e5e5;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
         }
-        .card.news-card:hover {
-            transform: translateY(-5px);
+        .news-card:hover {
             box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .news-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .news-card-title {
+            color: var(--primary-green);
+        }
+        .news-card-meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .news-card-excerpt {
+            flex-grow: 1;
         }
         footer {
             background-color: var(--dark-text);
@@ -66,8 +83,6 @@
         }
         footer a { color: var(--accent-yellow); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-        footer .social-icons a { font-size: 1.5rem; margin: 0 10px; color: var(--white); }
-        footer .social-icons a:hover { color: var(--accent-yellow); }
     </style>
 </head>
 <body>
@@ -75,8 +90,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <!-- PERBAIKAN: Menghapus "image/" dari path -->
-                <img src="CIDOKOM LOGO.png" alt="Logo Desa Cidokom" class="me-2">
+                <img src="image/logo-cidokom.png" alt="Logo Desa Cidokom" class="me-2">
                 Desa Cidokom
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,39 +119,36 @@
     <main class="py-5">
         <div class="container">
             <div class="row g-4">
-                <!-- Contoh Berita 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card news-card h-100">
-                        <img src="https://placehold.co/600x400/347f4b/white?text=Kegiatan+Desa" class="card-img-top" alt="Berita 1">
-                        <div class="card-body">
-                            <p class="card-text"><small class="text-muted">31 Juli 2025</small></p>
-                            <h5 class="card-title">Gotong Royong Membersihkan Lingkungan Desa</h5>
-                            <p class="card-text">Warga Desa Cidokom antusias mengikuti kegiatan kerja bakti membersihkan selokan dan lingkungan sekitar untuk menyambut HUT RI.</p>
-                            <a href="#" class="btn btn-outline-success">Baca Selengkapnya</a>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="news-card">
+                        <img src="image/berita-kkn.jpg" class="news-card-img" alt="Pembukaan KKN">
+                        <div class="news-card-body">
+                            <h5 class="news-card-title">Mahasiswa KKN UIN Jakarta Resmi Memulai Program Pengabdian di Desa Cidokom</h5>
+                            <p class="news-card-meta">Jul 31, 2025 | Admin Cidokom</p>
+                            <p class="news-card-excerpt">Mahasiswa Kuliah Kerja Nyata (KKN) dari UIN Syarif Hidayatullah Jakarta secara resmi memulai masa pengabdian mereka...</p>
+                            <a href="berita-kkn.html" class="btn btn-primary mt-auto align-self-start">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
-                <!-- Contoh Berita 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card news-card h-100">
-                        <img src="https://placehold.co/600x400/347f4b/white?text=Pelatihan+UMKM" class="card-img-top" alt="Berita 2">
-                        <div class="card-body">
-                            <p class="card-text"><small class="text-muted">30 Juli 2025</small></p>
-                            <h5 class="card-title">Pelatihan Fotografi Produk untuk Pelaku UMKM</h5>
-                            <p class="card-text">Pemerintah Desa bekerja sama dengan mahasiswa KKN mengadakan pelatihan untuk meningkatkan kualitas visual produk UMKM.</p>
-                            <a href="#" class="btn btn-outline-success">Baca Selengkapnya</a>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="news-card">
+                        <img src="image/berita-mtq.jpg" class="news-card-img" alt="Kegiatan MTQ">
+                        <div class="news-card-body">
+                            <h5 class="news-card-title">KEGIATAN MTQ TINGKAT KECAMATAN GUNUNGSINDUR</h5>
+                            <p class="news-card-meta">Jul 31, 2025 | Admin Cidokom</p>
+                            <p class="news-card-excerpt">Musabaqah Tilawatil Qur'an (MTQ) Tingkat Kecamatan Gunungsindur kembali digelar dengan meriah untuk menggali potensi qori dan qoriah...</p>
+                            <a href="berita-mtq.html" class="btn btn-primary mt-auto align-self-start">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
-                <!-- Contoh Berita 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card news-card h-100">
-                        <img src="https://placehold.co/600x400/347f4b/white?text=Posyandu" class="card-img-top" alt="Berita 3">
-                        <div class="card-body">
-                            <p class="card-text"><small class="text-muted">29 Juli 2025</small></p>
-                            <h5 class="card-title">Jadwal Posyandu Bulan Agustus 2025</h5>
-                            <p class="card-text">Berikut adalah jadwal kegiatan Posyandu untuk balita dan lansia yang akan dilaksanakan pada bulan Agustus mendatang.</p>
-                            <a href="#" class="btn btn-outline-success">Baca Selengkapnya</a>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="news-card">
+                        <img src="image/berita-tahun-baru-islam.jpg" class="news-card-img" alt="Tahun Baru Islam">
+                        <div class="news-card-body">
+                            <h5 class="news-card-title">PERINGATAN TAHUN BARU ISLAM 1447 H</h5>
+                            <p class="news-card-meta">Jul 30, 2025 | Admin Cidokom</p>
+                            <p class="news-card-excerpt">Dalam rangka menyambut dan memperingati Tahun Baru Islam 1 Muharram 1447 Hijriyah, Pemerintah Desa Cidokom mengadakan...</p>
+                            <a href="berita-tahun-baru-islam.html" class="btn btn-primary mt-auto align-self-start">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -150,35 +161,25 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5>Profil</h5>
-                    <p class="small">
-                        <strong>DESA CIDOKOM - GUNUNG SINDUR</strong><br>
-                        <strong>BOGOR - JAWA BARAT</strong><br>
-                        Website desa dibangun dengan tujuan sebagai media pelayanan publik resmi desa, yang dibangun dan dikelola oleh tim desa setempat. Dengan memanfaatkan website penyelenggaraan pelayanan publik dapat dilakukan secara cepat dan mudah.
-                        <a href="https://cidokom-gunungsindur.desa.id/about-us" target="_blank" class="d-block mt-2">Selengkapnya...</a>
-                    </p>
+                    <p class="small">Website desa dibangun dengan tujuan sebagai media pelayanan publik resmi desa, yang dibangun dan dikelola oleh tim desa setempat.</p>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>Kategori Produk</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Makanan & Minuman</a></li>
-                        <li><a href="#">Kerajinan Tangan</a></li>
-                        <li><a href="#">Produk Pertanian</a></li>
-                        <li><a href="#">Fashion & Aksesoris</a></li>
+                        <li><a href="marketplace.html#makanan">Makanan & Minuman</a></li>
+                        <li><a href="marketplace.html#kerajinan">Kerajinan Tangan</a></li>
+                        <li><a href="marketplace.html#pertanian">Produk Pertanian</a></li>
+                        <li><a href="marketplace.html#fashion">Fashion & Aksesoris</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>Hubungi Kami</h5>
                     <p>Email: <a href="mailto:desacidokom2015@gmail.com">desacidokom2015@gmail.com</a><br>
                        Telepon: <a href="tel:02518414453">(0251) 8414453</a></p>
-                    <div class="social-icons">
-                        <a href="https://web.facebook.com/profile.php?id=61578369452143&_rdc=1&_rdr#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/desa_cidokom/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@Desa_cidokom" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
                 </div>
             </div>
             <hr>
-            <p class="text-center mb-0">&copy; 2025 Pemerintah Desa Cidokom. Hak Cipta Dilindungi.</p>
+            <p class="text-center mb-0">© 2025 Pemerintah Desa Cidokom. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 
