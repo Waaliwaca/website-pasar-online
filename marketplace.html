@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace UMKM - Website Desa Cidokom</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS ini sama persis dengan halaman utama untuk konsistensi */
+        :root {
+            --primary-green: #1e6034;
+            --accent-green: #347f4b;
+            --accent-yellow: #f3c624;
+            --dark-text: #333333;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+        }
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: 'Merriweather', serif;
+        }
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #eaeaea;
+        }
+        .navbar-brand { color: var(--dark-text) !important; }
+        .navbar-brand img { height: 50px; }
+        .navbar .nav-link { color: var(--dark-text); font-weight: 600; }
+        .navbar .nav-link:hover, .navbar .nav-link.active { color: var(--primary-green); }
+        .page-header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .section-title {
+            color: var(--primary-green);
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .product-card {
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: white;
+            height: 100%;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .star-rating .fa-star { color: var(--accent-yellow); }
+        .btn-primary {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-green);
+            border-color: var(--accent-green);
+        }
+        footer {
+            background-color: var(--dark-text);
+            color: white;
+            padding: 40px 0 20px 0;
+        }
+        footer a { color: var(--accent-yellow); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .social-icons a { font-size: 1.5rem; margin: 0 10px; color: var(--white); }
+        footer .social-icons a:hover { color: var(--accent-yellow); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="image/CIDOKOM LOGO.png" alt="Logo Desa Cidokom" class="me-2">
+                Desa Cidokom
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil_desa.html">Profil Desa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="marketplace.html">Marketplace UMKM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hubungi_kami.html">Hubungi Kami</a></li>
+                </ul>
+                <a href="https://forms.gle/KGq5u53tT8d3o4uR7" target="_blank" class="btn btn-secondary ms-lg-3 mt-2 mt-lg-0">Login / Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Marketplace UMKM</h1>
+            <p class="lead">Jelajahi dan dukung produk-produk terbaik dari Desa Cidokom.</p>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <!-- Filter Produk -->
+            <div class="text-center mb-5">
+                <button class="btn btn-outline-success active">Semua</button>
+                <button class="btn btn-outline-success">Makanan & Minuman</button>
+                <button class="btn btn-outline-success">Kerajinan Tangan</button>
+                <button class="btn btn-outline-success">Produk Pertanian</button>
+            </div>
+
+            <!-- Daftar Produk -->
+            <div class="row g-4">
+                <!-- Baris 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card">
+                        <img src="image/Keripik Singkong Balado.png" alt="Keripik Singkong Balado">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Keripik Singkong Balado</h5>
+                            <p class="card-text text-muted">oleh Ibu Siti</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <p class="fw-bold fs-5 mb-0">Rp 15.000</p>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    <span class="ms-1">(4.5)</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary w-100 mt-3">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-md-6">
+                    <div class="card product-card">
+                        <img src="image/Madu Hutan Asli.png" alt="Madu Hutan Asli">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Madu Hutan Asli</h5>
+                            <p class="card-text text-muted">oleh Pak Budi</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <p class="fw-bold fs-5 mb-0">Rp 85.000</p>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <span class="ms-1">(5.0)</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary w-100 mt-3">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card">
+                        <img src="image/Gula Aren Organik.png" alt="Gula Aren Organik">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Gula Aren Organik</h5>
+                            <p class="card-text text-muted">oleh Kelompok Tani Maju</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <p class="fw-bold fs-5 mb-0">Rp 25.000</p>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                    <span class="ms-1">(4.0)</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary w-100 mt-3">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card">
+                        <img src="image/Kerajinan Tangan Bambu.png" alt="Kerajinan Tangan Bambu">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kerajinan Tangan Bambu</h5>
+                            <p class="card-text text-muted">oleh Sanggar Kreatif</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <p class="fw-bold fs-5 mb-0">Rp 50.000</p>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <span class="ms-1">(4.8)</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary w-100 mt-3">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Baris 2 (Contoh Tambahan) -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/600x400/347f4b/white?text=Produk+Baru" alt="Produk Baru">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Contoh Produk Lain</h5>
+                            <p class="card-text text-muted">oleh UMKM Hebat</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <p class="fw-bold fs-5 mb-0">Rp 30.000</p>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <span class="ms-1">(5.0)</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary w-100 mt-3">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Profil</h5>
+                    <p class="small">
+                        <strong>DESA CIDOKOM - GUNUNG SINDUR</strong><br>
+                        <strong>BOGOR - JAWA BARAT</strong><br>
+                        Website desa dibangun dengan tujuan sebagai media pelayanan publik resmi desa, yang dibangun dan dikelola oleh tim desa setempat. Dengan memanfaatkan website penyelenggaraan pelayanan publik dapat dilakukan secara cepat dan mudah.
+                        <a href="https://cidokom-gunungsindur.desa.id/about-us" target="_blank" class="d-block mt-2">Selengkapnya...</a>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Kategori Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Makanan & Minuman</a></li>
+                        <li><a href="#">Kerajinan Tangan</a></li>
+                        <li><a href="#">Produk Pertanian</a></li>
+                        <li><a href="#">Fashion & Aksesoris</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Hubungi Kami</h5>
+                    <p>Email: <a href="mailto:desacidokom2015@gmail.com">desacidokom2015@gmail.com</a><br>
+                       Telepon: <a href="tel:02518414453">(0251) 8414453</a></p>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/profile.php?id=61578369452143&_rdc=1&_rdr#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/desa_cidokom/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Desa_cidokom" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2025 Pemerintah Desa Cidokom. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

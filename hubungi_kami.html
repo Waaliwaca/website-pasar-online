@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Website Desa Cidokom</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS ini sama persis dengan halaman utama untuk konsistensi */
+        :root {
+            --primary-green: #1e6034;
+            --accent-green: #347f4b;
+            --accent-yellow: #f3c624;
+            --dark-text: #333333;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+        }
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: 'Merriweather', serif;
+        }
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #eaeaea;
+        }
+        .navbar-brand { color: var(--dark-text) !important; }
+        .navbar-brand img { height: 50px; }
+        .navbar .nav-link { color: var(--dark-text); font-weight: 600; }
+        .navbar .nav-link:hover, .navbar .nav-link.active { color: var(--primary-green); }
+        .page-header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .section-title {
+            color: var(--primary-green);
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        footer {
+            background-color: var(--dark-text);
+            color: white;
+            padding: 40px 0 20px 0;
+        }
+        footer a { color: var(--accent-yellow); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .social-icons a { font-size: 1.5rem; margin: 0 10px; color: var(--white); }
+        footer .social-icons a:hover { color: var(--accent-yellow); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="image/CIDOKOM LOGO.png" alt="Logo Desa Cidokom" class="me-2">
+                Desa Cidokom
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil_desa.html">Profil Desa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="marketplace.html">Marketplace UMKM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="hubungi_kami.html">Hubungi Kami</a></li>
+                </ul>
+                <a href="https://forms.gle/KGq5u53tT8d3o4uR7" target="_blank" class="btn btn-secondary ms-lg-3 mt-2 mt-lg-0">Login / Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Hubungi Kami</h1>
+            <p class="lead">Kami siap membantu. Silakan hubungi kami melalui informasi di bawah ini.</p>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h3 class="section-title text-start">Kirim Pesan</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Alamat Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subjek</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="section-title text-start">Informasi Kontak</h3>
+                    <p><i class="fas fa-map-marker-alt fa-fw me-2"></i><strong>Alamat:</strong><br>Jl. Raya Cidokom, Kecamatan Gunungsindur, Kabupaten Bogor, Jawa Barat</p>
+                    <p><i class="fas fa-phone fa-fw me-2"></i><strong>Telepon:</strong><br><a href="tel:02518414453">(0251) 8414453</a></p>
+                    <p><i class="fas fa-envelope fa-fw me-2"></i><strong>Email:</strong><br><a href="mailto:desacidokom2015@gmail.com">desacidokom2015@gmail.com</a></p>
+                    
+                    <h3 class="section-title text-start mt-5">Lokasi Kami</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.757712179836!2d106.70296681522901!3d-6.425333895349527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e8a71575214d%3A0x242ba49354452248!2sKantor%20Desa%20Cidokom!5e0!3m2!1sen!2sid!4v1678886400000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Profil</h5>
+                    <p class="small">
+                        <strong>DESA CIDOKOM - GUNUNG SINDUR</strong><br>
+                        <strong>BOGOR - JAWA BARAT</strong><br>
+                        Website desa dibangun dengan tujuan sebagai media pelayanan publik resmi desa, yang dibangun dan dikelola oleh tim desa setempat. Dengan memanfaatkan website penyelenggaraan pelayanan publik dapat dilakukan secara cepat dan mudah.
+                        <a href="https://cidokom-gunungsindur.desa.id/about-us" target="_blank" class="d-block mt-2">Selengkapnya...</a>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Kategori Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Makanan & Minuman</a></li>
+                        <li><a href="#">Kerajinan Tangan</a></li>
+                        <li><a href="#">Produk Pertanian</a></li>
+                        <li><a href="#">Fashion & Aksesoris</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Hubungi Kami</h5>
+                    <p>Email: <a href="mailto:desacidokom2015@gmail.com">desacidokom2015@gmail.com</a><br>
+                       Telepon: <a href="tel:02518414453">(0251) 8414453</a></p>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/profile.php?id=61578369452143&_rdc=1&_rdr#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/desa_cidokom/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Desa_cidokom" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2025 Pemerintah Desa Cidokom. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
