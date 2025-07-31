@@ -51,6 +51,25 @@
             text-align: center;
             font-weight: 700;
         }
+        .staff-card {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .staff-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .staff-card h5 {
+            margin-top: 1rem;
+            color: var(--primary-green);
+        }
+        .staff-card p {
+            color: #6c757d;
+        }
         footer {
             background-color: var(--dark-text);
             color: white;
@@ -67,8 +86,8 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <!-- PERBAIKAN: Menghapus "image/" dari path -->
-                <img src="CIDOKOM LOGO.png" alt="Logo Desa Cidokom" class="me-2">
+                <!-- PERBAIKAN: Menggunakan nama file baru yang aman -->
+                <img src="image/logo-cidokom.png" alt="Logo Desa Cidokom" class="me-2">
                 Desa Cidokom
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,11 +116,11 @@
     <main class="py-5">
         <div class="container">
             <!-- Sejarah Desa -->
-            <section id="sejarah" class="mb-5">
+            <section id="sejarah" class="mb-5 p-4 bg-white rounded shadow-sm">
                 <h2 class="section-title">Sejarah Singkat</h2>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-4">
-                        <img src="https://placehold.co/600x400/1e6034/white?text=Kantor+Desa" class="img-fluid rounded shadow" alt="Kantor Desa Cidokom">
+                        <img src="https://placehold.co/600x400/1e6034/white?text=Kantor+Desa" class="img-fluid rounded" alt="Kantor Desa Cidokom">
                     </div>
                     <div class="col-md-8">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -111,37 +130,104 @@
             </section>
 
             <!-- Visi dan Misi -->
-            <section id="visi-misi" class="mb-5">
+            <section id="visi-misi" class="mb-5 p-4 bg-white rounded shadow-sm">
                 <h2 class="section-title">Visi & Misi</h2>
                 <h3>Visi</h3>
-                <p>"Mewujudkan Desa Cidokom yang Maju, Mandiri, Sejahtera, dan Berakhlak Mulia."</p>
+                <p class="lead">"Kabupaten Bogor Menjadi Kabupaten Termaju di Indonesia"</p>
+                <hr>
                 <h3>Misi</h3>
                 <ul>
-                    <li>Meningkatkan kualitas sumber daya manusia yang cerdas dan sehat.</li>
-                    <li>Mengembangkan perekonomian desa berbasis potensi lokal dan UMKM.</li>
-                    <li>Meningkatkan tata kelola pemerintahan desa yang bersih, transparan, dan akuntabel.</li>
-                    <li>Menciptakan lingkungan yang aman, nyaman, dan lestari.</li>
+                    <li>Meningkatkan kesalehan sosial dan kesejahteraan masyarakat;</li>
+                    <li>Meningkatkan daya saing perekonomian masyarakat dan pengembangan usaha berbasis sumber daya alam dan pariwisata;</li>
+                    <li>Meningkatkan integrasi, koneksitas, kualitas dan kuantitas infrastruktur wilayah dan pengelolaan lingkungan hidup yang berkelanjutan;</li>
+                    <li>Meningkatkan aksesibilitas dan kualitas penyelenggaraan pendidikan dan pelayanan kesehatan;</li>
+                    <li>Meningkatkan kinerja penyelenggaraan pemerintahan dan kerjasama antar daerah dalam kerangka tata kelola pemerintahan yang baik.</li>
                 </ul>
             </section>
 
             <!-- Struktur Pemerintahan -->
             <section id="struktur-pemerintahan">
                 <h2 class="section-title">Struktur Pemerintahan Desa</h2>
-                <div class="row text-center">
-                    <div class="col-md-4 mb-4">
-                        <img src="https://placehold.co/200x200/eeeeee/333333?text=Foto" class="rounded-circle mb-2" alt="Kepala Desa">
-                        <h5>Nama Kepala Desa</h5>
-                        <p class="text-muted">Kepala Desa</p>
+                <div class="row">
+                    <!-- Kepala Desa -->
+                    <div class="col-12 text-center mb-4">
+                        <div class="staff-card">
+                            <img src="image/sain-saputra.png" alt="Kepala Desa">
+                            <h5>SAIN SAPUTRA, .SE</h5>
+                            <p>KEPALA DESA</p>
+                        </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <img src="https://placehold.co/200x200/eeeeee/333333?text=Foto" class="rounded-circle mb-2" alt="Sekretaris Desa">
-                        <h5>Nama Sekretaris Desa</h5>
-                        <p class="text-muted">Sekretaris Desa</p>
+                    <!-- Sekretaris Desa -->
+                    <div class="col-12 text-center mb-4">
+                        <div class="staff-card">
+                            <img src="image/aji-ibrahim.png" alt="Sekretaris Desa">
+                            <h5>AJI IBRAHIM</h5>
+                            <p>SEKRETARIS DESA</p>
+                        </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <img src="https://placehold.co/200x200/eeeeee/333333?text=Foto" class="rounded-circle mb-2" alt="Bendahara Desa">
-                        <h5>Nama Bendahara Desa</h5>
-                        <p class="text-muted">Bendahara Desa</p>
+                    <!-- Perangkat Desa Lainnya -->
+                    <div class="col-md-4 col-6">
+                        <div class="staff-card">
+                            <img src="image/riki-jopani.png" alt="Kasi Pemerintahan">
+                            <h5>RIKI JOPANI</h5>
+                            <p>KASI PEMERINTAHAN</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="staff-card">
+                            <img src="image/zulfahmi.png" alt="Kasi Kesejahteraan">
+                            <h5>ZULFAHMI</h5>
+                            <p>KASI KESEJAHTERAAN</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="staff-card">
+                            <img src="image/edi.png" alt="Kasi Pelayanan">
+                            <h5>EDI</h5>
+                            <p>KASI PELAYANAN</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="staff-card">
+                            <img src="image/syahroni.png" alt="Kaur Tata Usaha & Umum">
+                            <h5>SYAHRONI</h5>
+                            <p>KAUR TATA USAHA & UMUM</p>
+                        </div>
+                    </div>
+                     <div class="col-md-4 col-6">
+                        <div class="staff-card">
+                            <img src="image/windi-yusiana.jpg" alt="Kaur Keuangan">
+                            <h5>WINDI YUSIANA</h5>
+                            <p>KAUR KEUANGAN</p>
+                        </div>
+                    </div>
+                     <div class="col-md-4 col-6">
+                        <div class="staff-card">
+                            <img src="image/suji-ramdani.png" alt="Kaur Perencanaan">
+                            <h5>SUJI RAMDANI</h5>
+                            <p>KAUR PERENCANAAN</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="staff-card">
+                            <img src="image/nalih-saman.png" alt="Kepala Dusun I">
+                            <h5>NALIH SAMAN</h5>
+                            <p>KEPALA DUSUN I</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="staff-card">
+                            <img src="image/supriyadi.png" alt="Kepala Dusun II">
+                            <h5>SUPRIYADI</h5>
+                            <p>KEPALA DUSUN II</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="staff-card">
+                            <img src="image/zezen-wahyudin.png" alt="Kepala Dusun III">
+                            <h5>ZEZEN WAHYUDIN</h5>
+                            <p>KEPALA DUSUN III</p>
+                        </div>
                     </div>
                 </div>
             </section>
