@@ -54,7 +54,7 @@
         .carousel-item img {
             width: 100%;
             height: 450px;
-            object-fit: cover;
+            object-fit: contain; /* DIGANTI DARI COVER MENJADI CONTAIN */
             border-radius: 8px;
         }
         footer {
@@ -93,7 +93,6 @@
     <main class="py-5">
         <div class="container">
             <div class="row g-5">
-                <!-- Kolom Gambar Produk dengan Slider -->
                 <div class="col-lg-6">
                     <div id="productCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -122,7 +121,6 @@
                         </button>
                     </div>
                 </div>
-                <!-- Kolom Informasi Produk -->
                 <div class="col-lg-6 product-info">
                     <h1>Nasi Goreng Dapur Uwais</h1>
                     <p class="price mb-3">Rp 13.000</p>
@@ -144,6 +142,7 @@
                     </div>
 
                     <a href="https://wa.me/628388580692" target="_blank" class="btn btn-success btn-lg w-100 mt-4"><i class="fab fa-whatsapp me-2"></i>Pesan Sekarang (WhatsApp)</a>
+                    <a href="#" target="_blank" class="btn btn-warning btn-lg w-100 mt-2"><i class="fas fa-store me-2"></i>Kunjungi Toko Online</a>
                 </div>
             </div>
         </div>
