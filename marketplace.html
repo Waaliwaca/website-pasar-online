@@ -127,6 +127,9 @@
                  <li class="nav-item" role="presentation">
                     <button class="nav-link" id="pills-fashion-tab" data-bs-toggle="pill" data-bs-target="#pills-fashion" type="button" role="tab">Fashion & Aksesoris</button>
                 </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-jasa-tab" data-bs-toggle="pill" data-bs-target="#pills-jasa" type="button" role="tab">Jasa & Layanan</button>
+                </li>
             </ul>
 
             <div class="tab-content" id="pills-tabContent">
@@ -157,7 +160,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Ayam Geprek Evi</h5>
                                 <p class="card-text text-muted">oleh Dapur Evi</p>
-                                <a href="detail-ayam-geprek.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
+                                <a href="detail-ayam-geprek-evi.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
@@ -167,7 +170,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Seblak Dapur Uwais</h5>
                                 <p class="card-text text-muted">oleh Dapur Uwais</p>
-                                <a href="detail-seblak-uwais.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
+                                <a href="seblak-dapur-uwais.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
@@ -191,6 +194,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="jasa">
+                        <div class="card product-card">
+                            <img src="https://placehold.co/600x400/347f4b/white?text=Jasa+Tenda" alt="Jasa Alat Pesta">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Jasa Alat Pesta</h5>
+                                <p class="card-text text-muted">oleh Trio K Tenda</p>
+                                <a href="#" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -210,6 +223,7 @@
                         <li><a href="marketplace.html#kerajinan">Kerajinan Tangan</a></li>
                         <li><a href="marketplace.html#pertanian">Produk Pertanian</a></li>
                         <li><a href="marketplace.html#fashion">Fashion & Aksesoris</a></li>
+                        <li><a href="marketplace.html#jasa">Jasa & Layanan</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -248,6 +262,7 @@
                     else if (targetId === '#pills-kerajinan') filterValue = 'kerajinan';
                     else if (targetId === '#pills-pertanian') filterValue = 'pertanian';
                     else if (targetId === '#pills-fashion') filterValue = 'fashion';
+                    else if (targetId === '#pills-jasa') filterValue = 'jasa';
                     
                     filterProducts(filterValue);
                 });
