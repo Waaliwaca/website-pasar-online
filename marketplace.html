@@ -174,23 +174,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="pertanian">
+                    <!-- === PRODUK GULA AREN DIUBAH === -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="makanan">
                         <div class="card product-card">
-                            <img src="image/gula-aren-organik.png" alt="Gula Aren Organik">
+                            <img src="image/dapoer-gemoy.png" alt="Dapoer Gemoy">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Gula Aren Organik</h5>
-                                <p class="card-text text-muted">oleh Kelompok Tani Maju</p>
-                                <a href="detail-gula-aren.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
+                                <h5 class="card-title">Dapoer Gemoy</h5>
+                                <p class="card-text text-muted">oleh Dapoer Gemoy</p>
+                                <a href="dapoer-gemoy.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
-                     <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="fashion">
+                    <!-- === PRODUK KAOS DESA DIUBAH === -->
+                     <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="makanan">
                         <div class="card product-card">
-                            <img src="image/kaos-desa.png" alt="Kaos Desa Cidokom">
+                            <img src="image/kasyira-fried-chicken.png" alt="Kasyira Fried Chicken Geprek">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Kaos Desa Cidokom</h5>
-                                <p class="card-text text-muted">oleh Cidokom Apparel</p>
-                                <a href="detail-kaos-desa.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
+                                <h5 class="card-title">Kasyira Fried Chicken Geprek</h5>
+                                <p class="card-text text-muted">oleh Kasyira</p>
+                                <a href="kasyira-fried.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
@@ -200,7 +202,6 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Jasa Alat Pesta</h5>
                                 <p class="card-text text-muted">oleh Trio K Tenda</p>
-                                <!-- === LINK DIPERBAIKI === -->
                                 <a href="jasa-alat-pesta.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
                             </div>
                         </div>
@@ -265,7 +266,6 @@
                 });
             });
 
-            // Initial filter based on URL hash
             const hash = window.location.hash.substring(1);
             if (hash) {
                 const tabToActivate = document.querySelector(`#pills-${hash}-tab`);
@@ -273,10 +273,10 @@
                     new bootstrap.Tab(tabToActivate).show();
                     filterProducts(hash);
                 } else {
-                    filterProducts('semua'); // Default to 'semua' if hash is invalid
+                    filterProducts('semua');
                 }
             } else {
-                filterProducts('semua'); // Default to 'semua' on initial load
+                filterProducts('semua');
             }
         });
     </script>
