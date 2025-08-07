@@ -51,7 +51,8 @@
             border-radius: 8px;
             border: 1px solid #e5e5e5;
         }
-        .carousel-item img {
+        .carousel-item img,
+        .carousel-item video {
             width: 100%;
             height: 450px;
             object-fit: cover; 
@@ -99,16 +100,23 @@
                             <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
                         </div>
                         <div class="carousel-inner rounded">
                             <div class="carousel-item active">
-                                <img src="https://placehold.co/800x600/1e6034/FFFFFF?text=Tenda+Pesta" class="d-block w-100" alt="Foto Tenda Pesta">
+                                <img src="image/jasa-tenda.png" class="d-block w-100" alt="Foto Tenda Pesta">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://placehold.co/800x600/347f4b/FFFFFF?text=Kursi+%26+Meja" class="d-block w-100" alt="Foto Kursi dan Meja">
+                                <img src="image/jasa-tenda-nikahan.png" class="d-block w-100" alt="Foto Tenda Pernikahan">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://placehold.co/800x600/f3c624/333333?text=Peralatan+Lainnya" class="d-block w-100" alt="Foto Peralatan Pesta">
+                                <img src="image/bagian-depan.png" class="d-block w-100" alt="Foto Bagian Depan Tenda">
+                            </div>
+                            <div class="carousel-item">
+                                <video class="d-block w-100" autoplay loop muted>
+                                    <source src="image/vidio-tenda.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung tag video.
+                                </video>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
