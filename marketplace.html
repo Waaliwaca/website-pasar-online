@@ -203,6 +203,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="makanan">
+                        <div class="card product-card">
+                            <img src="image/gabin-rasa.jpg" alt="Gabin Bu Marnih">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Gabin Bu Marnih</h5>
+                                <p class="card-text text-muted">oleh Ibu Marnih</p>
+                                <a href="gabin-ibumarnih.html" class="btn btn-primary w-100 mt-auto">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,12 +253,10 @@
             const productItems = document.querySelectorAll('.product-item');
 
             function filterProducts(filter) {
-                let hasVisibleItems = false;
                 productItems.forEach(item => {
                     const category = item.getAttribute('data-category');
                     if (filter === 'semua' || category === filter) {
                         item.style.display = 'block';
-                        hasVisibleItems = true;
                     } else {
                         item.style.display = 'none';
                     }
