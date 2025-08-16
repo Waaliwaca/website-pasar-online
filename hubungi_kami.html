@@ -78,7 +78,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="image/logo-cidokom.png" alt="Logo Desa Cidokom" class="me-2">
+                <img src="image/logo.png" alt="Logo Desa Cidokom" class="me-2">
                 Desa Cidokom
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +91,6 @@
                     <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
                     <li class="nav-item"><a class="nav-link active" href="hubungi_kami.html">Hubungi Kami</a></li>
                 </ul>
-                <a href="https://forms.gle/KGq5u53tT8d3o4uR7" target="_blank" class="btn btn-secondary ms-lg-3 mt-2 mt-lg-0">Login / Daftar</a>
             </div>
         </div>
     </nav>
@@ -108,23 +107,26 @@
             <div class="row g-5">
                 <div class="col-lg-6">
                     <h3 class="section-title text-start">Kirim Pesan</h3>
-                    <form>
+                    <form action="https://formsubmit.co/desacidokom2015@gmail.com" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="name" required>
+                            <input type="text" class="form-control" id="name" name="nama" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Alamat Email</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="subject" class="form-label">Subjek</label>
-                            <input type="text" class="form-control" id="subject" required>
+                            <input type="text" class="form-control" id="subject" name="subjek" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                            <textarea class="form-control" id="message" name="pesan" rows="5" required></textarea>
                         </div>
+                        <input type="hidden" name="_honey" style="display:none">
+                        <input type="hidden" name="_captcha" value="false">
+                        
                         <button type="submit" class="btn btn-primary">Kirim Pesan</button>
                     </form>
                 </div>
@@ -136,7 +138,7 @@
                     
                     <h3 class="section-title text-start mt-5">Lokasi Kami</h3>
                     <div class="map-container">
-                        <iframe src="http://googleusercontent.com/maps/google.com/2" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.654876272547!2d106.69258247478058!3d-6.438063062921207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e7ee38356391%3A0x959145553554472!2sKantor%20Kepala%20Desa%20Cidokom!5e0!3m2!1sid!2sid!4v1723810141872!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
